@@ -1,0 +1,13 @@
+{
+  "name": "restoclean",
+  "version": "1.0.0",
+  "description": "Профессиональный клининг для премиальных ресторанов",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/",
+    "serve": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

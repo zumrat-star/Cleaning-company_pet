@@ -1,0 +1,51 @@
+:root {
+  /* Цвета */
+  --primary-color: #e67e22;
+  --primary-hover: #d35400;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --bg-dark: #2c3e50;
+  --bg-darker: #34495e;
+  --bg-white: #ffffff;
+  --overlay-bg: rgba(0, 0, 0, 0.7);
+
+  /* Типографика */
+  --font-family-primary: "Inter", "Arial", sans-serif;
+  --font-family-secondary: "Roboto", "Arial", sans-serif;
+
+  /* Адаптивные размеры шрифтов */
+  --h1-size: clamp(4.5rem, 9vw, 7rem);
+  --h2-size: clamp(2rem, 5vw, 3.5rem);
+  --h3-size: clamp(1.5rem, 4vw, 2.5rem);
+  --text-large: clamp(1.1rem, 2.5vw, 1.6rem);
+  --text-medium: clamp(1rem, 2vw, 1.3rem);
+  --text-small: clamp(0.9rem, 1.8vw, 1.1rem);
+
+  /* Отступы и размеры */
+  --section-padding: clamp(3rem, 8vw, 5rem) 0;
+  --container-padding: 0 clamp(1rem, 4vw, 2rem);
+  --header-padding: clamp(0.8rem, 2vw, 1rem) 0;
+  --card-padding: clamp(1.5rem, 3vw, 2rem);
+  --btn-padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1.5rem, 4vw, 2.5rem);
+  --grid-gap: clamp(1.5rem, 3vw, 2rem);
+  --nav-gap: clamp(1rem, 3vw, 2rem);
+
+  /* Разное */
+  --border-radius: 8px;
+  --card-radius: 12px;
+  --card-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  --container-max-width: 1200px;
+  --hero-height: min(100vh, 800px);
+  --header-height: clamp(4rem, 10vw, 5rem);
+
+  /* Веса шрифтов */
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  /* Анимации */
+  --transition-fast: 0.3s;
+  --transition-medium: 0.5s;
+  --blur-intensity: blur(10px);
+  --overlay-blur: blur(2px);
+}

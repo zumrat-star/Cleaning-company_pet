@@ -1,0 +1,181 @@
+/* Анимация появления слева */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Анимация появления справа */
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Анимация встряски для WhatsApp */
+@keyframes shake-right {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-2px) rotate(-2deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(2px) rotate(2deg);
+  }
+}
+
+/* Анимация пульсации */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Применение анимаций */
+.hero-logo {
+  animation: float 3s ease-in-out infinite;
+}
+
+.whatsapp-float-right {
+  animation: shake-right 2s ease-in-out infinite;
+}
+
+.service-card {
+  animation: slideInFromLeft 0.6s ease-out;
+}
+
+.client-logo {
+  animation: slideInFromRight 0.6s ease-out;
+}
+
+/* Задержки для анимаций карточек */
+.service-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.service-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.service-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.service-card:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.service-card:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+/* Плавные переходы для интерактивных элементов */
+.nav-menu a,
+.btn,
+.social-link,
+.service-card,
+.client-logo {
+  transition: all var(--transition-fast);
+}
+
+/* Анимация при скролле */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Анимация пульсирующего свечения */
+@keyframes gentle-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(230, 126, 34, 0.4),
+      0 5px 15px rgba(230, 126, 34, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(230, 126, 34, 0.8),
+      0 5px 25px rgba(230, 126, 34, 0.4);
+  }
+}
+
+/* Анимация мягкой пульсации */
+@keyframes soft-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Основная анимация для кнопки - только свечение */
+.hero-content .btn {
+  animation: gentle-glow 2s infinite ease-in-out;
+  background: var(--primary-color);
+  border: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Минимальный hover-эффект - только остановка анимации и легкое затемнение */
+.hero-content .btn:hover {
+  animation: none;
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(63, 30, 0, 0.4);
+}
+
+.hero-content .btn.pulse:hover {
+  animation: none;
+  transform: translateY(-1px) scale(1);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .hero-content .btn {
+    animation-duration: 2.5s;
+  }
+
+  /* Упрощаем свечение для мобильных */
+  @keyframes gentle-glow-mobile {
+    0%,
+    100% {
+      box-shadow: 0 0 5px rgba(230, 126, 34, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 10px rgba(230, 126, 34, 0.6);
+    }
+  }
+}
+
+/* Поддержка prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-content .btn {
+    animation: none !important;
+  }
+}
