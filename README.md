@@ -1,1 +1,1 @@
-git@github.com:zumrat-star/Cleaning-company_pet.git
+https://github.com/zumrat-star/Cleaning-company_pet.git
